@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/utils/paginated_response.dart';

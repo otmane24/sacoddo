@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -74,9 +72,6 @@ class _ActivityScreenState extends State<ActivityScreen> {
                 ),
 
                 orElse: () {
-                  log(
-                    " Building Activity Screen with state: ${_activityCubit.activities!.numberOfPages} ",
-                  );
                   final activities = _activityCubit.activities!.result;
 
                   final itemCount = state.maybeWhen(

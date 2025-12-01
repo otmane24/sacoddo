@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +21,6 @@ class _InternetStatusWraperState extends State<InternetStatusWraper> {
   Widget build(BuildContext context) {
     return BlocBuilder<InternetCubit, InternetState>(
       builder: (context, state) {
-        log(" InternetStatusWraper - Internet State Changed: $state ");
         return Scaffold(
           backgroundColor: Colors.black,
           body: widget.child,
