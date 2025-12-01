@@ -30,7 +30,6 @@ class InternetCubit extends Cubit<InternetState> {
   void listenToInternetStatus() {
     emit(const InternetState.initial());
     subscribeToInternetAccessStreamsUseCase().listen((hasInternetAccess) async {
-      log(" InternetCubit - Internet status changed: $hasInternetAccess ");
       emit(InternetState.internetStatus(hasInternetAccess: hasInternetAccess));
       isOnline = hasInternetAccess;
       //to ensure that we don't show the online indicator at app start
